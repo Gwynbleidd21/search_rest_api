@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Find a street</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="static/styles/new.css">
+        <link rel="stylesheet" href="static/styles/loader.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    </head>
+    <body>
+    <h1 class="title">Type down a street name You want to find</h1>
+    <form class="search" action="">
+
+      <input type="text" id="input" placeholder="Search here..." required>
+      <button type="button" data-toggle="modal" data-target="#myModal"
+              onclick="doFunction({searched : document.getElementById('input').value});">Search</button>
+    </form>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Street name with highest similarity to your input</h4>
+            </div>
+            <div id="myData" class="modal-body">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="static/scripts/toBackend.js"></script>
+
+    </body>
+
+</html>
+
